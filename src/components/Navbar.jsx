@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
+import { useAuth, useUsername } from "./AuthContext";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const username = useUsername();
+  const { logout } = useAuth();
 
   return (
     <nav className="header-nav">
       <Link to="/">Home</Link>
       <a href="#about">About</a>
       <Link to="/contact">Contact</Link>
+
+      {/* <Link to="/login">Login</Link> */}
+      {username ? <p onClick={logout}> hi {username},  logout</p> : <Link to="/login">Login</Link> }
       <button
         onClick={toggleTheme}
         style={{
