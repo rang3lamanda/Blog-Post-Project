@@ -1,32 +1,30 @@
 import { useState } from "react";
+import { useUsername } from './AuthContext'
 
 const CommentForm = ({ addComment }) => {
-  const [name, setName] = useState("");
   const [text, setText] = useState("");
+  const username = useUsername();
+
+  if (!username) {
+    return <p>Please log in to add a comment.</p>;
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name || !text) return;
+    if (!username || !text) return;
 
     const newComment = {
-      name: name,
+      name: username,
       body: text
     };
 
     addComment(newComment);
-
-    setName("");
     setText("");
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>Name:</label>
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
 
       <label>Comment:</label>
       <textarea
