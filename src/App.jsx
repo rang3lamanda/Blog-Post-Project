@@ -5,6 +5,8 @@ import BlogPostPage from './Pages/BlogPostPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IndividualPostPage from './Pages/IndividualPostPage';
 import { ThemeProvider } from "./components/ThemeContext";
+import HomePage from './components/HomePage';
+
 import './App.css';
 
 function App() {
@@ -14,8 +16,7 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/" element={<BlogPostPage />} />
-
+          <Route path="/" element={<HomePage />} />
           <Route path="/posts" element={<BlogPostPage />} />
           <Route path="/posts/:id" element={<IndividualPostPage />} />
           <Route path="/contact" element={<ContactPage />} />
