@@ -1,25 +1,26 @@
 
+
 :root{
   --primary-blue: #2d6aaf;
-  --header-bg: linear-gradient(to right, #1591ca, #007aff);
-  --primary-blue-dark: #0b4a8d;
+  --header-bg: linear-gradient(to right, #1f3642, #046ee0);
+  --primary-blue-dark: #eff0f0;
 
-  --bg-main: #ccd9e7;
-  --bg-card: #fbfbfb;
+  --bg-main: #8da7c2;
+  --bg-card: #f6f6f6;
 
-  --text-dark: #555;       
-  --text-medium: #8e8b8b;      
-  --text-light: #a2a2a2;    
-  --text-body: #898989;     
+  --text-dark: #f3eeee;       
+  --text-medium: #050404;      
+  --text-light: #141313;    
+  --text-body: #141313;     
 
-  --border-light: #ccc;
-  --accent-pink: #ff6b81;
-  --accent-pink-dark: #ff4757;
-  --footer-bg: #333;
+  --border-light: #f8f1f1;
+  --accent-pink: #d97483;
+  --accent-pink-dark: #efefef;
+  --footer-bg: #121111;
 }
 
 body.dark {
-  --bg-main: #002456;
+  --bg-main: #093269;
   --dark-surface: #03278ac1;
 
   --bg-card: var(--dark-surface);
@@ -54,7 +55,7 @@ body {
 /** Header **/
 .header {
   background: var(--header-bg); 
-  color: var(--header-text, #2345a0);
+  color: var(--header-text, #141313);
   padding: 40px 40px;
   display: flex;
   align-items: center;
@@ -86,15 +87,14 @@ body {
   text-decoration: underline;
 }
 
-
-
 /** Container **/
-.container {
-  width: 80%;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;       
-  background: transparent; 
+
+.container { 
+width: 80%; 
+max-width: 900px; 
+margin: 40px auto; 
+padding: 0 20px; 
+ background: transparent; 
 }
 
 
@@ -313,7 +313,7 @@ body {
   text-align: center;
   padding: 5px;
   margin-top: 10px;
-  background: #333;   
+  background: #972828;   
   color: white;       
 }
 
@@ -360,7 +360,7 @@ body.dark .contact-page input,
 body.dark .contact-page textarea {
   background-color: var(--input-bg);
   color: var(--text-dark);
-  border: 1px solid #444;
+  border: 1px solid #4b4949;
 }
 
 
@@ -394,3 +394,66 @@ body.dark .like-btn:hover {
 
 
 
+
+
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("90.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.hero-text h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background-color: #16224e;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgb(109, 43, 142);
+  padding: 1.5rem;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
