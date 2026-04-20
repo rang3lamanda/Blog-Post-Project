@@ -13,7 +13,7 @@ const IndividualPostPage = () => {
   const [loading, setLoading] = useState(true);
   const [liked, setLiked] = useState(false);
 
-  // 🚀 TYPES
+
   const types = [
     "MISSION_LOG",
     "DEEP_SPACE_REPORT",
@@ -30,15 +30,15 @@ const IndividualPostPage = () => {
     ANOMALY_ALERT: "🌠 ANOMALY ALERT",
   };
 
-  // ✅ FIXED (matches BlogPostPage logic)
+
   const getType = (id) => types[(id - 1) % types.length];
 
-  // ✂️ Trim title
+
   const trimTitle = (title) => {
     return title.split(" ").slice(0, 5).join(" ");
   };
 
-  // 🛰️ Format body
+
   const formatBody = (body, type, id) => {
     const text = body.split(" ").slice(0, 20).join(" ");
 
@@ -83,7 +83,7 @@ Further investigation required.`;
     }
   };
 
-  // 📡 FETCH DATA
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -112,7 +112,7 @@ Further investigation required.`;
         });
 
         setUser(userData);
-        setComments(commentsData); // ✅ ORIGINAL behavior restored
+        setComments(commentsData); 
       } catch (err) {
         console.log("Failed to load post");
       } finally {
@@ -123,7 +123,7 @@ Further investigation required.`;
     fetchData();
   }, [id]);
 
-  // 💬 ADD COMMENT (original)
+
   const addComment = async (newComment) => {
     try {
       const res = await fetch(

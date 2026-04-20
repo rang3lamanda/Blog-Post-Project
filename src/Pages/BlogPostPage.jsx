@@ -5,7 +5,7 @@ const BlogPostPage = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // 🔹 Types
+
   const types = [
     "MISSION_LOG",
     "DEEP_SPACE_REPORT",
@@ -24,12 +24,11 @@ const BlogPostPage = () => {
 
   const getType = (index) => types[index % types.length];
 
-  // 🔹 Trim real JSON title
+
   const trimTitle = (title) => {
     return title.split(" ").slice(0, 5).join(" ");
   };
 
-  // 🔹 Format body based on type
   const formatBody = (body, type, id) => {
     const text = body.split(" ").slice(0, 20).join(" ");
 
@@ -74,7 +73,7 @@ Further investigation required.`;
     }
   };
 
-  // 🔹 Fetch + transform data
+  
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
