@@ -1,3 +1,4 @@
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -53,7 +54,7 @@
 body {
   margin: 0;
 }
-
+/*
 #root {
   width: 1126px;
   max-width: 100%;
@@ -65,7 +66,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
-
+*/
 h1,
 h2 {
   font-family: var(--heading);
