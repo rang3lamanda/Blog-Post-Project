@@ -1,5 +1,7 @@
 import ProjectCard from "./ProjectCard";
+import { Link } from "react-router-dom";
 
+ 
 const HomePage = () => {
     return (
         <div>
@@ -11,12 +13,42 @@ const HomePage = () => {
                     <p>Discover news, space missions, and cosmic stories</p>
                 </div>
 
-             <img src="/90.jpeg"  alt="90" /> 
+
+                < div className="cta-buttons">
+                <Link to="/login" className="cta-btn primary"> Login </Link>
+                
+                <Link to="/posts" className="cta-btn primary">  Blog </Link>
+               
+                </div> 
 
 
-             <div className="section">
-                <h2>Latest Space News</h2>
+                <div className="feature-section">
+                 <div className="feature-image">
+                 <img src="/Team.jpg" alt="feature" />
                 </div>
+
+                <div className="feature-text">
+                <h2>Stay Connected to Space Discoveries</h2>
+                <p>
+                Explore curated space news, missions, and discoveries. Stay inspired by the
+                universe and never miss an update from the cosmos.
+                </p>
+
+                <Link to="/posts" className="cta-btn primary">
+                Read More
+                </Link>
+                </div>
+                </div>
+
+
+
+
+
+
+
+             <div className="section"> 
+                <h2>Latest Space News</h2>
+             </div>
 
 
         <section className="projects">

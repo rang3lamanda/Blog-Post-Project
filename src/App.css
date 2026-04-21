@@ -396,7 +396,7 @@ body.dark .like-btn:hover {
 
 
 
-
+/** image size **/
 .hero {
   width: 100%;
   height: 100vh;
@@ -456,4 +456,86 @@ body.dark .like-btn:hover {
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+/** styling for the call to action button **/  
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* PRIMARY */
+.cta-btn.primary {
+  background-color: #007aff;
+  color: white;
+}
+
+.cta-btn.primary:hover {
+  background-color: #005fcc;
+}
+
+/* SECONDARY */
+.cta-btn.secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta-btn.secondary:hover {
+  background-color: white;
+  color: black;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;  /* 👈 THIS centers them */
+  gap: 25px;
+}
+
+
+
+/** To adjust the midle picture **/
+
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px;
+  flex-wrap: wrap;
+}
+
+.feature-image img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.feature-text {
+  max-width: 400px;
+}
+
+.feature-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.feature-text p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
