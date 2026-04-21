@@ -6,7 +6,7 @@ const BlogList = ({ posts }) => {
   }
 
   return (
-    <div>
+    <div className="blog-list">
       {posts.map((post) => (
         <BlogPost key={post.id} post={post} />
       ))}

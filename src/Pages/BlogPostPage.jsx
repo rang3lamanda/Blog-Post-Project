@@ -4,7 +4,7 @@ import BlogList from "../components/BlogList.jsx";
 const BlogPostPage = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [error, setError] = useState(null);
 
   const types = [
     "MISSION_LOG",
@@ -23,7 +23,6 @@ const BlogPostPage = () => {
   };
 
   const getType = (index) => types[index % types.length];
-
 
   const trimTitle = (title) => {
     return title.split(" ").slice(0, 5).join(" ");
@@ -73,7 +72,6 @@ Further investigation required.`;
     }
   };
 
-  
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
@@ -91,12 +89,42 @@ Further investigation required.`;
 
         setPosts(spacePosts);
       })
+      .catch(() => {
+        setError("Failed to fetch posts");
+      })
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>🌌 Receiving transmissions...</p>;
+  if (loading) {
+    return (
+      <div className="page-wrapper">
+        <p>🌌 Receiving transmissions...</p>
+      </div>
+    );
+  }
 
-  return <BlogList posts={posts} />;
+  if (error) {
+    return (
+      <div className="page-wrapper">
+        <p>{error}</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="page-wrapper">
+      {/* PAGE HEADER */}
+      <div className="blogs-header">
+        <h1 className="blog-title">Our Blogs</h1>
+        <p className="blog-subtitle">
+          Latest updates, stories, and space discoveries
+        </p>
+      </div>
+
+      {/* BLOG LIST */}
+      <BlogList posts={posts} />
+    </div>
+  );
 };
 
 export default BlogPostPage;
