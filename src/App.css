@@ -173,9 +173,7 @@ body {
 .blog-list {
   display: flex;
   flex-direction: column;
-
-  gap: 30px;   /* 👈 THIS creates space between each post */
-
+  gap: 30px;   
   width: 100%;
   max-width: 1200px;
   margin: 40px auto;
@@ -605,14 +603,13 @@ body.dark .like-btn:hover {
   background-position: center;
   background-size: contain;
   background-color: rgb(9, 9, 9);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
   
 }
+
 .hero-text {
   text-align: center;
   color: white;
