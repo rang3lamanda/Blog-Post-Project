@@ -713,6 +713,12 @@ body.dark .like-btn:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .feature-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 
 
