@@ -1,6 +1,8 @@
 import ProjectCard from "./ProjectCard";
-import {Link} from "react-router-dom"; 
+ 
+import { Link } from "react-router-dom";
 
+ 
 const HomePage = () => {
   return (
     <div> 
@@ -9,6 +11,7 @@ const HomePage = () => {
         <h1>Welcome To Space Blog</h1>
         <p>Explore the Universe — Discover news, space missions, and cosmic stories</p>
       </div>
+
 
       <div className="hero"></div> 
 
@@ -32,9 +35,32 @@ const HomePage = () => {
 
           <Link to="/posts" className="cta-btn primary"> Read More</Link>
         </div>
-      </div>  
+    
 
 
+
+                <div className="feature-text">
+                <h2>Stay Connected to Space Discoveries</h2>
+                <p>
+                Explore curated space news, missions, and discoveries. Stay inspired by the
+                universe and never miss an update from the cosmos.
+                </p>
+
+                <Link to="/posts" className="cta-btn primary">
+                Read More
+                </Link>
+                </div>
+                </div>
+
+
+
+
+
+
+
+             <div className="section"> 
+                <h2>Latest Space News</h2>
+             </div>
 
 
       <div className="section">
