@@ -243,11 +243,17 @@ body {
   margin: 60px auto;
   padding: 30px 40px;
 
-  background-color: rgb(253, 253, 253);
+  background-color: transparent;
+   background-image: url("Starts.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 
-  text-align: center;
+  text-align: center; 
 }
 
 /* spacing for sections */
