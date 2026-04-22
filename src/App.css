@@ -237,11 +237,18 @@ body {
   max-width: 900px;
   margin: 60px auto;
   padding: 30px 40px;
-  background-color: rgb(253, 253, 253);
+  background-color:  transparent;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  color: var(--text-light);
+  color: white;
   text-align: center;
+
+
+  background-image: url("Starts.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 
@@ -259,8 +266,9 @@ body {
   text-align: left; 
 }
 
-.contact-page h1,h2{
-  color : var(--text-light);
+.contact-page h1,
+.contact-page h2 {
+  color: white;
 }
 
 
@@ -306,7 +314,7 @@ body {
 
 .contact-page label {
   font-weight: 600;
-  color: var(--text-light);
+  color: white;
 }
 
 
@@ -344,7 +352,7 @@ body {
 
 
 .contact-item {
-  color: var(--text-light);
+  color: white;
 }
 
 
@@ -377,7 +385,7 @@ body {
   width: 100%;
   max-width: 900px;
   min-height: 900px; 
-  background: white;
+  background: transparent;
   padding: 40px 40px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -385,12 +393,20 @@ body {
   flex-direction: column; 
   justify-content: flex-start;
   gap: 10px; 
-  color: var(--text-light);
+  color: white;
+
+  background-image: url("Starts.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+
 }
 
 .login-card input::placeholder,
 .login-card textarea::placeholder {
-  color: var(--text-light);
+  color: white;
   opacity: 1; 
 }
 
@@ -407,7 +423,7 @@ body {
   padding: 10px;
   border-radius: 8px;
   background-color: var(--text-medium);
-  color: var(--text-light);
+  color: white;
   border: 1px solid #795c5c;
 }
 
@@ -428,12 +444,13 @@ body {
 .login-card h2 {
   font-size: 30px;
   text-align: center;
+   color: white;
 }
 
 .login-subtitle {
   text-align: center;
   font-size: 16px;
-  color: #666;
+  color: white;
 }
 
 .login-card label {
