@@ -79,6 +79,23 @@ body {
   color: var(--text-dark);
 }
 
+.nav-btn {
+  padding: 10px 18px;      
+  border-radius: 999px;   
+  border: none;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #007aff;
+  transform: scale(1.05);
+}
+
 .header a {
   color: white;
   text-decoration: none;
@@ -114,6 +131,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .post:hover {
@@ -124,7 +142,8 @@ body {
 .post h2 {
   font-size: 24px;
   margin: 0;
-  color: #111;
+  color: var(--text-light);
+  padding-bottom: 15px; 
 }
 .post p {
   font-size: 16px;
@@ -133,11 +152,11 @@ body {
   margin: 0;
 }
 
+
 .blog-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-
   width: 100%;
   max-width: 1200px;
   margin: 40px auto;
@@ -214,6 +233,8 @@ body {
 
 
 
+
+
 /** Meta **/
 .meta {
   list-style: none;  
@@ -221,7 +242,7 @@ body {
   margin-top: 15px;
   margin-bottom: 15px; 
   color: var(--text-medium);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .meta li {
@@ -232,21 +253,19 @@ body {
 
 /* Contact Page*/
 .contact-page {
+  width: calc(100% - 40px);
   max-width: 900px;
   margin: 60px auto;
-  padding: 30px 40px;
-  background-color:  transparent;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  color: white;
-  text-align: center;
-
-
+  padding: clamp(20px, 5vw, 40px);
+  box-sizing: border-box;
   background-image: url("Starts.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: white;
+  text-align: center;
 }
 
 
@@ -262,6 +281,7 @@ body {
   flex-direction: column;
   gap: 12px;
   text-align: left; 
+  width: 100%;
 }
 
 .contact-page h1,
@@ -278,6 +298,7 @@ body {
   border-radius: 8px;
   border: 1px solid #050505;
   font-size: 1em;
+  max-width: 100%;
 }
 
 .contact-page input::placeholder,
@@ -360,25 +381,8 @@ body {
   justify-content: center;
   padding: 60px 20px;
 }
+
 /*
-.login-card {
-  width: 100%;
-  max-width: 900px;
-  min-height: 800px;
-  background: rgb(238, 238, 240);
-  padding: 60px 50px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(113, 105, 105, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 100px 60px;   
-  gap: 28px; 
-  color: var(--text-light);
-
-}
-  */
-
 .login-card {
   width: 100%;
   max-width: 900px;
@@ -393,6 +397,30 @@ body {
   gap: 10px; 
   color: white;
 
+  background-image: url("Starts.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+
+}
+  */
+
+
+.login-card {
+  width: 100%;
+  max-width: 900px;
+  min-height: 900px; 
+  background: transparent;
+  padding: 80px 60px ;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  gap: 40px ; 
+  color: white;
   background-image: url("Starts.jpg");
   background-size: cover;
   background-position: center;
@@ -418,12 +446,14 @@ body {
 
 
 .login-card input {
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
   background-color: var(--text-medium);
   color: white;
   border: 1px solid #795c5c;
+  font-size: 22px;
 }
+
 
 .login-card button {
   padding: 10px;
@@ -440,9 +470,13 @@ body {
 
 
 .login-card h2 {
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
    color: white;
+}
+
+.login-card p {
+  font-size: 22px;
 }
 
 .login-subtitle {
@@ -452,19 +486,19 @@ body {
 }
 
 .login-card label {
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 600;
 }
 
-.login-card input {
-  padding: 12px;
-  font-size: 16px;
-}
+
 
 .login-card button {
   padding: 12px;
   font-size: 16px;
 }
+
+
+
 
 
 
@@ -497,22 +531,24 @@ body {
   padding: 10px;
   border-radius: 12px;   
   border: 1px solid #a7a5a5;
-  background: rgb(24, 23, 23);     
+  background-color: var(--input-bg);    
   resize: vertical;      
   margin-bottom: 10px;
 }
 
 .comments input,
 .comments textarea {
-  background: rgb(2, 2, 2);   
-  color: #000000;  
+  background-color: var(--text-medium);
+  color: var(--text-dark); 
   border-radius: 8px;   
-  border: 1px solid #4e4c4c;   
+  border: 1px solid #4e4c4c;  
+  color: white; 
 }
 
 
 
-/** Submit Button  background-color: #ff6b81;**/
+
+/** Submit Button  **/
 .like-btn {
   text-align: left;
   padding: 8px 16px;
@@ -651,7 +687,7 @@ body.dark .login-card textarea::placeholder {
 body.dark .login-card button {
   background-color: var(--submit-btn-bg);
   color: var(--text-dark);
-}
+} 
 
 body.dark .login-card button:hover {
   background-color: var(--submit-btn-bg-hover);
@@ -666,6 +702,24 @@ body.dark .individual-post p,
 body.dark .individual-post .meta {
   color: var(--text-light);
 }
+
+
+
+
+/* home page */
+
+body.dark .feature-text p { 
+  color: var(--text-dark); 
+  margin-bottom: 20px; 
+  line-height: 1.6; 
+} 
+body.dark .about-text p { 
+  color: var(--text-dark); 
+  margin-bottom: 20px; 
+  line-height: 1.6; 
+} 
+
+
 
 
 /** image size **/
@@ -763,7 +817,7 @@ body.dark .individual-post .meta {
 
 
 
-/** styling for the call to action button **/  
+/** Call to action buttons **/  
 
 .cta-btn {
   display: inline-block;
@@ -805,7 +859,7 @@ body.dark .individual-post .meta {
 
 
 
-/** To adjust the middle picture **/ 
+/** Feature Section **/ 
 
 .feature-section{ 
   display: flex; 
@@ -831,11 +885,13 @@ body.dark .individual-post .meta {
   margin-bottom: 15px; 
 }
 
-.feature-text p { 
-  color: var(--text-light); 
+.feature-text p, 
+.feature-text h2{ 
+  color: white; 
   margin-bottom: 20px; 
   line-height: 1.6; 
 } 
+  
 
 
 
@@ -854,20 +910,48 @@ body.dark .individual-post .meta {
 
 @media (max-width: 768px){
   .feature-section {
-    flex-direction: columns; 
+    flex-direction: column; 
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .contact-page {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .contact-page h1 {
+    font-size: 24px;
+  }
+
+  .contact-page input,
+  .contact-page textarea {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 20px;
   }
 }
 
 
-/** Working on the about part of the page.   **/
+/** About Page**/
 .about-section {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   padding: 60px 40px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .about-image img {
@@ -885,9 +969,10 @@ body.dark .individual-post .meta {
   margin-bottom: 15px;
 }
 
-.about-text p {
+.about-text p, 
+.about-text h2 {
   line-height: 1.6;
-  color: var(--text-light);
+  color: white;
 }
 
 
@@ -896,7 +981,7 @@ body.dark .individual-post .meta {
 
 .logo-container {
   display: flex;
-    flex-direction: row;
+  flex-direction: row;
   align-items: center;
   gap: 12px;
 }
@@ -942,8 +1027,8 @@ body.dark .individual-post .meta {
 
 
 .header h1 {
-  font-size: 40px;  /* change this value */
-  font-weight: 600; /* optional */
+  font-size: 40px; 
+  font-weight: 600;
    margin: 0;
 }
 

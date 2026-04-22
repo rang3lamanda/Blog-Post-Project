@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useAuth } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const { login } = useAuth();
+  const navigate = useNavigate();
 
   const [userData, setUserData] = useState({
     username: "",
@@ -10,8 +12,15 @@ function Login() {
   });
 
   const onSubmit = (e) => {
-    e.preventDefault();
-    login(userData.username);
+  e.preventDefault();
+
+  if (!userData.username || !userData.password) {
+    alert("Please fill out both username and password");
+    return;
+  }
+
+  login(userData.username);
+  navigate("/");
   };
 
   return (

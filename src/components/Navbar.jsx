@@ -15,20 +15,21 @@ const Navbar = () => {
       <Link to="/posts">Blog</Link>
       <Link to="/contact">Contact</Link>
 
-      {/* <Link to="/login">Login</Link> */}
-      {username ? <p onClick={logout}> hi {username},  logout</p> : <Link to="/login">Login</Link> }
-      <button
-        onClick={toggleTheme}
-        style={{
-          marginLeft: "10px",
-          padding: "5px 10px",
-          cursor: "pointer"
-        }}
-      >
-        {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+      {username ? (
+        <button className="nav-btn" onClick={logout}>
+          Hey {username}, Logout
+        </button>
+      ) : (
+        <Link to="/login">
+          <button className="nav-btn">Login</button>
+        </Link>
+      )}
+
+      <button className="nav-btn" onClick={toggleTheme}>
+        {theme === "light" ? "🌙  Dark Mode" : "☀️ Light Mode"}
       </button>
     </nav>
   );
 };
 
-export default Navbar; 
+export default Navbar;
