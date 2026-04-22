@@ -106,11 +106,11 @@ body {
   border-radius: 12px;
 
   width: 100%;
-  max-width: 100%;   
+  max-width: 100%;  
 
   margin: 0 auto;
 
-  padding: 40px;     
+  padding: 40px;    
   min-height: 320px; 
 
   box-sizing: border-box;
@@ -664,6 +664,30 @@ body.dark .like-btn:hover {
   }
 }
 
+/* CONTACT PAGE RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-page {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .contact-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-page h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-page input,
+  .contact-page textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-page button {
+    width: 100%;  
+  }
+}
 
 
 
