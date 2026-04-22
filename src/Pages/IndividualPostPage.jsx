@@ -11,44 +11,110 @@ const IndividualPostPage = () => {
   const [user, setUser] = useState(null);
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [liked, setLiked] = useState(false);
+
+
+  const types = [
+    "MISSION_LOG",
+    "DEEP_SPACE_REPORT",
+    "SATELLITE_UPDATE",
+    "PLANETARY_BRIEFING",
+    "ANOMALY_ALERT",
+  ];
+
+  const typeLabels = {
+    MISSION_LOG: "🚀 MISSION LOG",
+    DEEP_SPACE_REPORT: "🌌 DEEP SPACE REPORT",
+    SATELLITE_UPDATE: "🛰️ SATELLITE UPDATE",
+    PLANETARY_BRIEFING: "🪐 PLANETARY BRIEFING",
+    ANOMALY_ALERT: "🌠 ANOMALY ALERT",
+  };
+
+
+  const getType = (id) => types[(id - 1) % types.length];
+
+
+  const trimTitle = (title) => {
+    return title.split(" ").slice(0, 5).join(" ");
+  };
+
+
+  const formatBody = (body, type, id) => {
+    const text = body.split(" ").slice(0, 20).join(" ");
+
+    switch (type) {
+      case "MISSION_LOG":
+        return `🚀 MISSION ENTRY #${id}
+
+${text}...
+
+— Commander Log`;
+
+      case "DEEP_SPACE_REPORT":
+        return `📡 DEEP SPACE SCAN
+
+${text}...
+
+Signal analysis complete.`;
+
+      case "SATELLITE_UPDATE":
+        return `🛰️ ORBITAL STATUS UPDATE
+
+${text}...
+
+All systems monitored.`;
+
+      case "PLANETARY_BRIEFING":
+        return `🪐 PLANETARY REPORT
+
+${text}...
+
+Council review pending.`;
+
+      case "ANOMALY_ALERT":
+        return `⚠️ ANOMALY DETECTED
+
+${text}...
+
+Further investigation required.`;
+
+      default:
+        return `${text}...`;
+    }
+  };
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-
         const postRes = await fetch(
           `https://jsonplaceholder.typicode.com/posts/${id}`
         );
         const postData = await postRes.json();
-        setPost(postData);
-
 
         const userRes = await fetch(
           `https://jsonplaceholder.typicode.com/users/${postData.userId}`
         );
         const userData = await userRes.json();
-        setUser(userData);
-
 
         const commentsRes = await fetch(
           `https://jsonplaceholder.typicode.com/posts/${id}/comments`
         );
         const commentsData = await commentsRes.json();
 
-      
-        const postId = parseInt(id, 10);
+        const type = getType(postData.id);
 
+        setPost({
+          ...postData,
+          type,
+          title: `${typeLabels[type]} #${postData.id} : ${trimTitle(postData.title)}`,
+          body: formatBody(postData.body, type, postData.id),
+        });
 
-        if (postId % 2 === 0) {
-          setComments(commentsData);
-        } else {
-          setComments([]);
-        }
-
+        setUser(userData);
+        setComments(commentsData); 
       } catch (err) {
-        setError("Failed to load post.");
+        console.log("Failed to load post");
       } finally {
         setLoading(false);
       }
@@ -71,15 +137,14 @@ const IndividualPostPage = () => {
 
       const savedComment = await res.json();
 
-      setComments([...comments, savedComment]);
+      setComments((prev) => [...prev, savedComment]);
     } catch (err) {
       alert("Failed to post comment.");
     }
   };
 
-  if (loading) return <p>Loading post...</p>;
-  if (error) return <p>{error}</p>;
-  if (!post) return <p>Post not found.</p>;
+  if (loading) return <p>🛰️ Decoding transmission...</p>;
+  if (!post) return <p>Signal lost.</p>;
 
   return (
     <div className="container">
