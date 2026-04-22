@@ -19,9 +19,9 @@ const ContactPage = () => {
       <h2>Have questions or feedback? Reach out to us!</h2>
 
       <div className="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:contact@blog.com">contact@blog.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+11234567890">(123) 456-7890</a></p>
-        <p><strong>Address:</strong> 123 Blog Street, City, Country</p>
+        <p className="contact-item"><strong>Email:</strong> <a href="mailto:contact@blog.com">contact@blog.com</a></p>
+        <p className="contact-item"><strong>Phone:</strong> <a href="tel:+11234567890">(123) 456-7890</a></p>
+        <p className="contact-item"><strong>Address:</strong> 123 Blog Street, City, Country</p>
       </div>
 
       <form onSubmit={handleSubmit}>

@@ -12,8 +12,8 @@
   --bg-card: #f6f6f6;
 
   --text-dark: #d5d5d5;       
-  --text-medium: #863030;      
-  --text-light: #010101;    
+  --text-medium: #959494;      
+  --text-light: #353434;    
   --text-body: #0b0b0b;   
     
 
@@ -41,7 +41,7 @@ body.dark {
   --btn-bg: #b9afaf;     
   --btn-bg-hover: #ff4757;
   --btn-text: #fff;
-  --input-bg: #2a2a2a;
+  --input-bg: #454444;
 
   --footer-bg: #000;
   --footer-text: #fff;
@@ -68,7 +68,6 @@ body {
   padding: 20px 40px;
 }
 
-
 .header h1 {
   margin: 0;
 }
@@ -79,6 +78,7 @@ body {
   align-items: center;
   position: static;
   transform: none;
+  color: var(--text-dark);
 }
 
 .header a {
@@ -105,21 +105,14 @@ body {
 .post {
   background-color: white;
   border-radius: 12px;
-
   width: 100%;
   max-width: 100%;  
-
   margin: 0 auto;
-
   padding: 40px;    
   min-height: 320px; 
-
   box-sizing: border-box;
-
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-
   transition: transform 0.2s ease, box-shadow 0.2s ease; 
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,6 +145,8 @@ body {
   margin: 40px auto;
   padding: 0 20px;
 }
+
+
 
 /*BlogPostPage*/
 .page-wrapper {
@@ -237,29 +232,23 @@ body {
 
 
 
-/* Contact Page Container */
+/* Contact Page*/
 .contact-page {
   max-width: 900px;
   margin: 60px auto;
   padding: 30px 40px;
-
-  background-color: transparent;
-   background-image: url("Starts.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-
+  background-color: rgb(253, 253, 253);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-
-  text-align: center; 
+  color: var(--text-light);
+  text-align: center;
 }
 
-/* spacing for sections */
+
 .contact-info {
   margin: 20px 0 30px;
   line-height: 1.6;
+
 }
 
 /* form layout */
@@ -267,8 +256,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  text-align: left; /* keeps labels aligned nicely */
+  text-align: left; 
 }
+
+.contact-page h1,h2{
+  color : var(--text-light);
+}
+
 
 /* inputs */
 .contact-page input,
@@ -279,6 +273,13 @@ body {
   border: 1px solid #050505;
   font-size: 1em;
 }
+
+.contact-page input::placeholder,
+.contact-page textarea::placeholder {
+  color: var(--text-light);
+  opacity: 1; 
+}
+
 
 /* button */
 .contact-page button {
@@ -293,47 +294,6 @@ body {
 .contact-page button:hover {
   background-color: #007aff;
 }
-/*
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 60px 20px;
-}
-
-
-.contact-page {
-  margin: 40px auto;
-  padding: 30px;
-  background-color: rgb(238, 238, 240);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
-  text-align: left;
-}
-
-.contact-page h1 {
-  font-size: 2em;
-  color: var(--text-medium);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.contact-page h2 {
-  font-size: 1.2em;
-  color: var(--text-light);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.contact-page p {
-  color: var(--text-light);
-  margin-bottom: 5px;
-  line-height: 1.5;
-}
-
-
-*/
-
 
 
 /**Contact form**/
@@ -341,13 +301,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .contact-page label {
   font-weight: 600;
   color: var(--text-light);
 }
+
 
 .contact-page input,
 .contact-page textarea {
@@ -356,10 +317,11 @@ body {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1em;
-  color: #525252;
-  background-color: rgb(7, 7, 7);
+  color: var(--text-light);
+  background-color: var(--text-medium);
   resize: vertical;
 }
+
 
 .contact-page textarea {
   min-height: 100px;
@@ -381,44 +343,71 @@ body {
 }
 
 
+.contact-item {
+  color: var(--text-light);
+}
+
+
 /* Login */
 .login-page {
   display: flex;
   justify-content: center;
   padding: 60px 20px;
 }
-
+/*
 .login-card {
   width: 100%;
   max-width: 900px;
   min-height: 800px;
- 
-
   background: rgb(238, 238, 240);
   padding: 60px 50px;
   border-radius: 12px;
-
   box-shadow: 0 4px 10px rgba(113, 105, 105, 0.1);
-
   display: flex;
   flex-direction: column;
-
   justify-content: flex-start;
   padding: 100px 60px;   
   gap: 28px; 
+  color: var(--text-light);
 
 }
+  */
+
+.login-card {
+  width: 100%;
+  max-width: 900px;
+  min-height: 900px; 
+  background: white;
+  padding: 40px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  gap: 10px; 
+  color: var(--text-light);
+}
+
+.login-card input::placeholder,
+.login-card textarea::placeholder {
+  color: var(--text-light);
+  opacity: 1; 
+}
+
+
 .login-card form {
   margin-top: 80px;  
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 
 .login-card input {
   padding: 10px;
   border-radius: 8px;
+  background-color: var(--text-medium);
+  color: var(--text-light);
   border: 1px solid #795c5c;
 }
 
@@ -556,13 +545,11 @@ body.dark .header a:hover {
 }
 
 
-
-
-
-
 body.dark .comments {
-  color: var(--text-dark); 
+  color: var(--text-light); 
 }
+
+
 body.dark .comments input,
 body.dark .comments textarea {
   background-color: var(--input-bg);
@@ -571,12 +558,19 @@ body.dark .comments textarea {
 }
 
 /* Contact form */
+
 body.dark .contact-page input,
 body.dark .contact-page textarea {
   background-color: var(--input-bg);
   color: var(--text-dark);
   border: 1px solid #4b4949;
 }
+body.dark .contact-page input::placeholder,
+body.dark .contact-page textarea::placeholder {
+  color: var(--text-dark);
+  opacity: 1; 
+}
+
 
 
 body.dark .contact-page button {
@@ -603,11 +597,32 @@ body.dark .like-btn:hover {
 }
 
 
+/* login */
+body.dark .login-card input {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-dark);
+  border: 1px solid #795c5c;
+}
+
+
+body.dark .login-card input::placeholder,
+body.dark .login-card textarea::placeholder {
+  color: var(--text-dark);
+  opacity: 1; 
+}
 
 
 
+body.dark .login-card button {
+  background-color: var(--submit-btn-bg);
+  color: var(--text-dark);
+}
 
-
+body.dark .login-card button:hover {
+  background-color: var(--submit-btn-bg-hover);
+}
 
 
 
@@ -675,18 +690,6 @@ body.dark .like-btn:hover {
   margin: 40px auto;
   padding: 0 20px;
 }
-
-/*
-.projects {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-
-  max-width: 1600px;   
-  margin: 40px auto;
-  padding: 0 20px;
-}
-*/
 
 
 .project-card {
@@ -822,14 +825,14 @@ body.dark .like-btn:hover {
   justify-content: center;
   gap: 40px;
   padding: 60px 40px;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: wrap; 
 }
 
 .about-image img {
   width: 500px;
   height: 500px;
   object-fit: cover;
-  border-radius: 50%; /*  makes it circular */
+  border-radius: 50%;
 }
 
 .about-text {
@@ -859,12 +862,12 @@ body.dark .like-btn:hover {
 
 
 .logo {
-  width: 50px;   /* adjust size */
+  width: 50px;  
   height: 50px;
   object-fit: contain;
 }
 
-.logo { /* make logo bigger */ 
+.logo { 
   width: 50px;
   height: 80px;
 }

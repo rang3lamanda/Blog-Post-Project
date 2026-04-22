@@ -20,8 +20,9 @@ function Login() {
         <h2>Welcome Back</h2>
         <p className="login-subtitle">Please login to continue</p>
 
-        <label>Username</label>
+        <label htmlFor="username">Username</label>
         <input
+          id="username"
           placeholder="Enter your username"
           value={userData.username}
           onChange={(e) =>
@@ -29,8 +30,9 @@ function Login() {
           }
         />
 
-        <label>Password</label>
+        <label htmlFor="password">Password</label>
         <input
+          id="password"
           placeholder="Enter your password"
           type="password"
           value={userData.password}
