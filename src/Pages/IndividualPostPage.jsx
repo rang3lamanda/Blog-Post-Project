@@ -160,7 +160,7 @@ Further investigation required.`;
 
         <button
           onClick={() => setLiked(!liked)}
-          className="like-btn"
+          className={`like-btn ${liked ? "liked" : ""}`}
         >
           {liked ? "❤️ Liked" : "🤍 Like"}
         </button>

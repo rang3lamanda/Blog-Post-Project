@@ -53,9 +53,7 @@ body {
   font-family: Arial, sans-serif;
   background: var(--bg-main);
   margin: 0;
-  padding: 0;
-
-  
+  padding: 0; 
 }
 
 
@@ -481,6 +479,7 @@ body {
 
 .comments {
   text-align: left;
+  color: var(--text-medium);
 }
 
 .comments h3 {
@@ -513,21 +512,33 @@ body {
 
 
 
-/** Submit Button **/
+/** Submit Button  background-color: #ff6b81;**/
 .like-btn {
   text-align: left;
   padding: 8px 16px;
   font-size: 1em;
-  background-color: #ff6b81; 
-  color: white;               
+  background-color:#b9afaf;
+  color: var(--btn-text);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   margin-bottom: 20px;
+  transition: background-color 0.2s ease;
 }
-.like-btn:hover {
-  background-color: #ff4757; 
+
+/* hover ONLY if NOT liked */
+.like-btn:hover:not(.liked) {
+  background-color: #ff4757;
 }
+
+/* liked state always wins */
+.like-btn.liked {
+  background-color: #ff6b81;
+}
+
+
+
+
 
 
 
@@ -602,10 +613,15 @@ body.dark .contact-page button:hover {
 body.dark .like-btn {
   background-color: var(--btn-bg);
   color: var(--btn-text);
+  transition: background-color 0.2s ease;
 }
 
-body.dark .like-btn:hover {
+body.dark .like-btn:hover:not(.liked) {
   background-color: var(--btn-bg-hover);
+}
+
+body.dark .like-btn.liked {
+  background-color: #ff6b81;
 }
 
 .footer {
@@ -641,6 +657,15 @@ body.dark .login-card button:hover {
   background-color: var(--submit-btn-bg-hover);
 }
 
+body.dark .individual-post {
+  background-color: white;
+}
+
+body.dark .individual-post h1,
+body.dark .individual-post p,
+body.dark .individual-post .meta {
+  color: var(--text-light);
+}
 
 
 /** image size **/
