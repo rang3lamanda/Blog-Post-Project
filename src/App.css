@@ -8,18 +8,19 @@
   --header-bg: linear-gradient(to right, #1f3642, #046ee0);
   --primary-blue-dark: #eff0f0;
 
-  --bg-main: #8da7c2;
+  --bg-main: #cbe4ff;
   --bg-card: #f6f6f6;
 
-  --text-dark: #f3eeee;       
-  --text-medium: #050404;      
-  --text-light: #141313;    
-  --text-body: #141313;     
-
+  --text-dark: #111111;   
+  --text-medium: #444444;  
+  --text-light: #777777;   
+ 
+   
   --border-light: #f8f1f1;
   --accent-pink: #d97483;
   --accent-pink-dark: #efefef;
   --footer-bg: #121111;
+  
 }
 
 body.dark {
@@ -57,15 +58,6 @@ body {
   
 }
 
-/* THIS fixes screen-edge touching globally */
-/*.container,
-.blog-list,
-.projects {
-  width: 100%;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}*/
 
 /** Header **/
 .header {
@@ -118,18 +110,18 @@ body {
   border-radius: 12px;
 
   width: 100%;
-  max-width: 100%;   /* lets it stretch wider */
+  max-width: 100%;   
 
   margin: 0 auto;
 
-  padding: 40px;     /* makes it thicker */
-  min-height: 320px; /* makes it taller */
+  padding: 40px;     
+  min-height: 320px; 
 
   box-sizing: border-box;
 
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* KEPT */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
 
   display: flex;
   flex-direction: column;
@@ -166,29 +158,19 @@ body {
 
 /*BlogPostPage*/
 .page-wrapper {
-  min-height: auto;   /* REMOVE 100vh pressure */
+  min-height: auto;  
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 60px 20px;
   gap: 30px;
 }
-/*
-.page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  padding: 60px 20px;
-  gap: 30px;
-}
-  */
 
 
 .blogs-header {
   width: 100%;
-  max-width: 1000px;   /* keeps it aligned with blog list */
-  text-align: center;  /* centers text */
+  max-width: 1000px;   
+  text-align: center; 
 }
 
 
@@ -196,7 +178,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  gap: 30px;   /* 👈 THIS creates space between each post */
+  gap: 30px;  
 
   width: 100%;
   max-width: 1200px;
@@ -284,7 +266,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  text-align: left; /* keeps labels aligned nicely */
+  text-align: left; 
+}
+
+.contact-page h1,h2{
+  color: var(--text-light);
+}
+
+.contact-info p {
+  color: var(--text-light);
 }
 
 /* inputs */
@@ -310,46 +300,6 @@ body {
 .contact-page button:hover {
   background-color: #007aff;
 }
-/*
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 60px 20px;
-}
-
-
-.contact-page {
-  margin: 40px auto;
-  padding: 30px;
-  background-color: rgb(238, 238, 240);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
-  text-align: left;
-}
-
-.contact-page h1 {
-  font-size: 2em;
-  color: var(--text-medium);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.contact-page h2 {
-  font-size: 1.2em;
-  color: var(--text-light);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.contact-page p {
-  color: var(--text-light);
-  margin-bottom: 5px;
-  line-height: 1.5;
-}
-
-
-*/
 
 
 
@@ -421,12 +371,12 @@ body {
   flex-direction: column;
 
   justify-content: flex-start;
-  padding: 100px 60px;   /* more space around edges */
+  padding: 100px 60px;  
   gap: 28px; 
 
 }
 .login-card form {
-  margin-top: 80px;   /* 👈 pushes username/password + button down */
+  margin-top: 80px;  
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -553,7 +503,8 @@ body {
 
 
 
-/** Dark Theme **/
+/****** Dark Theme ********/
+
 body {
   background-color: var(--bg-main);
   color: var(--text-dark);
@@ -573,10 +524,7 @@ body.dark .header a:hover {
 }
 
 
-
-
-
-
+/* Comments */
 body.dark .comments {
   color: var(--text-dark); 
 }
@@ -595,7 +543,6 @@ body.dark .contact-page textarea {
   border: 1px solid #4b4949;
 }
 
-
 body.dark .contact-page button {
   background-color: var(--submit-btn-bg);
   color: var(--text-dark);
@@ -605,6 +552,8 @@ body.dark .contact-page button:hover {
   background-color: var(--submit-btn-bg-hover);
 }
 
+
+/* like button */
 body.dark .like-btn {
   background-color: var(--btn-bg);
   color: var(--btn-text);
@@ -614,11 +563,23 @@ body.dark .like-btn:hover {
   background-color: var(--btn-bg-hover);
 }
 
+
+/* footer */ 
 .footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
 }
 
+
+
+
+
+
+
+
+
+
+/* home page*/
 .hero {
   height: 70vh;
   width: 100%;
@@ -638,7 +599,7 @@ body.dark .like-btn:hover {
 .hero-text {
   text-align: center;
   color: white;
-  padding: 20px 20px 10px;  /* smaller gap above/below */
+  padding: 20px 20px 10px;  
 }
 
 .hero-text h1 {
@@ -650,7 +611,7 @@ body.dark .like-btn:hover {
 
 .hero-text p {
   font-size: 22px;
-  line-height: 1.6;   /* FIXES word/line breathing space */
+  line-height: 1.6;   
   letter-spacing: 0.2px;
   margin: 0;
 }
@@ -659,17 +620,9 @@ body.dark .like-btn:hover {
   font-size: 36px;
   font-weight: bold;
   margin: 40px 0 20px;
-  text-align: left;   /* move left */
-  padding-left: 20px; /* optional: gives breathing space */
+  text-align: left; 
+  padding-left: 20px; 
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -677,24 +630,11 @@ body.dark .like-btn:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-
   width: 100%;
   max-width: 1400px;
   margin: 40px auto;
   padding: 0 20px;
 }
-
-/*
-.projects {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-
-  max-width: 1600px;   
-  margin: 40px auto;
-  padding: 0 20px;
-}
-*/
 
 
 .project-card {
@@ -703,6 +643,12 @@ body.dark .like-btn:hover {
   overflow: hidden;
   box-shadow: 0 4px 8px rgb(109, 43, 142);
   padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  color: var(--text-dark);
 }
 
 .project-card img {
@@ -711,13 +657,11 @@ body.dark .like-btn:hover {
   margin-bottom: 1rem;
 }
 
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+
 
 
