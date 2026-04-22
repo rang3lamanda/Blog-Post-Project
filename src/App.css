@@ -8,7 +8,7 @@
   --header-bg: linear-gradient(to right, #1a658d, #0b345d);
   --primary-blue-dark: #eff0f0;
 
-  --bg-main: #091f56d1;
+  --bg-main: #4e72cfd1;
   --bg-card: #f6f6f6;
 
   --text-dark: #d5d5d5;       
@@ -82,7 +82,7 @@ body {
 }
 
 .header a {
-  color: var(--bg-main);
+  color: white;
   text-decoration: none;
   font-weight: 500;
 }
@@ -895,4 +895,8 @@ body.dark .like-btn:hover {
   font-weight: 600; /* optional */
    margin: 0;
 }
+
+
+
+
 
