@@ -4,18 +4,19 @@
   --header-bg: linear-gradient(to right, #4a90e2, #007aff);
   --primary-blue-dark: #007aff;
 
-  --bg-main: #f5f5f5;
-  --bg-card: #ffffff;
+  --bg-main: #d1e0e5 ;
+  /*  --bg-main: #a4d3e3*/
+  --bg-card: #f6f6f6;
 
-  --text-dark: #555;       
-  --text-medium: #8e8b8b;      
-  --text-light: #a2a2a2;    
-  --text-body: #898989;     
+  --text-dark: #141313;   
+  --text-medium: #534949;
+  --text-light:  #f3eeee;
 
-  --border-light: #ccc;
-  --accent-pink: #ff6b81;
-  --accent-pink-dark: #ff4757;
-  --footer-bg: #333;
+     
+  --border-light: #f8f1f1;
+  --accent-pink: #d97483;
+  --accent-pink-dark: #efefef;
+  --footer-bg: #121111;
 }
 
 body.dark {
@@ -29,9 +30,10 @@ body.dark {
   --submit-btn-bg-hover: #0052cc;
 
 
-  --text-dark: #e0e0e0;
+  --text-dark: #888888;
   --text-medium: #b0b0b0;
-  --text-light: #888888;
+  --text-light: #e0e0e0;
+
 
   --btn-bg: #575757;     
   --btn-bg-hover: #ff4757;
@@ -111,6 +113,42 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
 }
+.post p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+
+/*BlogPostPage*/
+.page-wrapper {
+  min-height: auto;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 30px;
+}
+
+
+.blogs-header {
+  width: 100%;
+  max-width: 1000px;  
+  text-align: center; 
+}
+
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;   
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
 
 
 
@@ -170,34 +208,61 @@ body {
 
 /* Contact Page Container */
 .contact-page {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: white;
-  border-radius: 10px;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px 40px;
+
+  background-color: rgb(238, 238, 240);
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
-  text-align: left;
-}
 
-.contact-page h1 {
-  font-size: 2em;
-  color: var(--text-medium);
-  margin-bottom: 20px;
   text-align: center;
 }
 
-.contact-page h2 {
-  font-size: 1.2em;
-  color: var(--text-light);
-  margin-bottom: 20px;
-  text-align: center;
+/* spacing for sections */
+.contact-info {
+  margin: 20px 0 30px;
+  line-height: 1.6;
 }
 
-.contact-page p {
+/* form layout */
+.contact-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left; 
+}
+
+.contact-page h1,h2 {
   color: var(--text-light);
-  margin-bottom: 5px;
-  line-height: 1.5;
+}
+
+.contact-info p {
+  color: var(--text-light);
+}
+
+/* inputs */
+.contact-page input,
+.contact-page textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* button */
+.contact-page button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-page button:hover {
+  background-color: #007aff;
 }
 
 
@@ -245,6 +310,89 @@ body {
 .contact-page button:hover {
   background-color: #007aff;
 }
+
+
+/* Login */
+.login-page {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 900px;
+  min-height: 800px;
+ 
+
+  background: rgb(238, 238, 240);
+  padding: 60px 50px;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  padding: 100px 60px;  
+  gap: 28px; 
+
+}
+.login-card form {
+  margin-top: 80px;  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.login-card input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-card button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #007aff;
+}
+
+
+.login-card h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.login-card label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.login-card input {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.login-card button {
+  padding: 12px;
+  font-size: 16px;
+}
+
 
 
 
@@ -308,18 +456,10 @@ body {
 
 
 
-/** Footer **/
-.footer {
-  text-align: center;
-  padding: 5px;
-  margin-top: 10px;
-  background: #333;   
-  color: white;       
-}
 
 
+/****** Dark Theme ********/
 
-/** Dark Theme **/
 body {
   background-color: var(--bg-main);
   color: var(--text-dark);
@@ -327,7 +467,7 @@ body {
 
 .header {
   background-color: var(--header-bg);
-  color: var(--header-text);
+  
 }
 
 body.dark .header a {
@@ -338,13 +478,8 @@ body.dark .header a:hover {
   color: var(--btn-bg-hover); 
 }
 
-.post, .container, .contact-page, .individual-post {
-  background-color: var(--bg-card);
-  color: var(--text-dark);
-}
 
-
-
+/* Comments */
 body.dark .comments {
   color: var(--text-dark); 
 }
@@ -363,7 +498,6 @@ body.dark .contact-page textarea {
   border: 1px solid #444;
 }
 
-
 body.dark .contact-page button {
   background-color: var(--submit-btn-bg);
   color: var(--text-dark);
@@ -373,6 +507,8 @@ body.dark .contact-page button:hover {
   background-color: var(--submit-btn-bg-hover);
 }
 
+
+/* like button */
 body.dark .like-btn {
   background-color: var(--btn-bg);
   color: var(--btn-text);
@@ -382,6 +518,8 @@ body.dark .like-btn:hover {
   background-color: var(--btn-bg-hover);
 }
 
+
+/* footer */ 
 .footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
@@ -396,7 +534,7 @@ body.dark .like-btn:hover {
 
 
 
-
+/* home page*/
 .hero {
   height: 70vh;
   width: 100%;
@@ -442,36 +580,15 @@ body.dark .like-btn:hover {
 
 
 
-
-
-
-
-
-
-
-
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-
   width: 100%;
   max-width: 1400px;
   margin: 40px auto;
   padding: 0 20px;
 }
-
-/*
-.projects {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-
-  max-width: 1600px;   
-  margin: 40px auto;
-  padding: 0 20px;
-}
-*/
 
 
 .project-card {
@@ -480,6 +597,17 @@ body.dark .like-btn:hover {
   overflow: hidden;
   box-shadow: 0 4px 8px rgb(109, 43, 142);
   padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  color: var(--text-light);
+}
+
+.project-card p {
+  color: var(--text-light);
+  margin: 0;
 }
 
 .project-card img {
@@ -488,9 +616,6 @@ body.dark .like-btn:hover {
   margin-bottom: 1rem;
 }
 
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .project-card:hover {
   transform: translateY(-8px);
