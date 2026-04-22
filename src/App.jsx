@@ -19,13 +19,15 @@ function App() {
         <BrowserRouter>
           <Header />
 
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/posts" element={<BlogPostPage />} />
-            <Route path="/posts/:id" element={<IndividualPostPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/posts" element={<BlogPostPage />} />
+              <Route path="/posts/:id" element={<IndividualPostPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </main>
 
           <Footer />
         </BrowserRouter>
