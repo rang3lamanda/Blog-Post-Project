@@ -258,7 +258,7 @@ body {
   margin: 60px auto;
   padding: clamp(20px, 5vw, 40px);
   box-sizing: border-box;
-  background-image: url("Starts.jpg");
+  background-image: url("/Starts.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -404,7 +404,7 @@ body {
   justify-content: center;
   gap: 40px ; 
   color: white;
-  background-image: url("Starts.jpg");
+  background-image: url("/Starts.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
