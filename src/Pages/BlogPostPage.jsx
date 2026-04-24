@@ -113,15 +113,12 @@ Further investigation required.`;
 
   return (
     <div className="page-wrapper">
-      {/* PAGE HEADER */}
       <div className="blogs-header">
         <h1 className="blog-title">Our Blogs</h1>
         <p className="blog-subtitle">
           Latest updates, stories, and space discoveries
         </p>
       </div>
-
-      {/* BLOG LIST */}
       <BlogList posts={posts} />
     </div>
   );

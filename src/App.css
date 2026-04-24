@@ -67,6 +67,8 @@ body {
 }
 
 .header h1 {
+  font-size: 40px; 
+  font-weight: 600;
   margin: 0;
 }
 
@@ -107,8 +109,6 @@ body {
 }
 
 
-
-/** Container **/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -145,6 +145,7 @@ body {
   color: var(--text-light);
   padding-bottom: 15px; 
 }
+
 .post p {
   font-size: 16px;
   line-height: 1.6;
@@ -152,20 +153,6 @@ body {
   margin: 0;
 }
 
-
-.blog-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-
-
-/*BlogPostPage*/
 .page-wrapper {
   min-height: auto;   
   display: flex;
@@ -180,6 +167,7 @@ body {
   width: 100%;
   max-width: 1000px;  
   text-align: center; 
+  font-size: 24px;
 }
 
 
@@ -275,7 +263,6 @@ body {
 
 }
 
-/* form layout */
 .contact-page form {
   display: flex;
   flex-direction: column;
@@ -289,8 +276,6 @@ body {
   color: white;
 }
 
-
-/* inputs */
 .contact-page input,
 .contact-page textarea {
   width: 100%;
@@ -311,11 +296,6 @@ body {
   background-color: var(--text-medium);
 }
 
-
-
-
-
-/* button */
 .contact-page button {
   padding: 10px;
   border: none;
@@ -330,6 +310,8 @@ body {
 }
 
 
+
+
 /**Contact form**/
 .contact-page form {
   display: flex;
@@ -342,7 +324,6 @@ body {
   font-weight: 600;
   color: white;
 }
-
 
 .contact-page input,
 .contact-page textarea {
@@ -382,14 +363,14 @@ body {
 }
 
 
+
+
 /* Login */
 .login-page {
   display: flex;
   justify-content: center;
   padding: 60px 20px;
 }
-
-
 
 .login-card {
   width: 100%;
@@ -412,15 +393,11 @@ body {
   background-blend-mode: darken;
 }
 
-
-
-
 .login-card input::placeholder,
 .login-card textarea::placeholder {
   color: white;
   opacity: 1; 
 }
-
 
 .login-card form {
   margin-top: 80px;  
@@ -428,7 +405,6 @@ body {
   flex-direction: column;
   gap: 10px;
 }
-
 
 .login-card input {
   padding: 12px;
@@ -438,7 +414,6 @@ body {
   border: 1px solid #795c5c;
   font-size: 22px;
 }
-
 
 .login-card button {
   padding: 10px;
@@ -452,7 +427,6 @@ body {
 .login-card button:hover {
   background: #007aff;
 }
-
 
 .login-card h2 {
   font-size: 50px;
@@ -474,8 +448,6 @@ body {
   font-size: 22px;
   font-weight: 600;
 }
-
-
 
 .login-card button {
   padding: 12px;
@@ -547,162 +519,16 @@ body {
   transition: background-color 0.2s ease;
 }
 
-/* hover ONLY if NOT liked */
+
 .like-btn:hover:not(.liked) {
   background-color: #ff4757;
 }
 
-/* liked state always wins */
 .like-btn.liked {
   background-color: #ff6b81;
 }
 
 
-
-
-
-
-
-/** Footer **/
-.footer {
-  text-align: center;
-  padding: 5px;
-  margin-top: 10px;
-  background: #972828;   
-  color: white;       
-}
-
-
-
-/** Dark Theme **/
-body {
-  background-color: var(--bg-main);
-  color: var(--text-dark);
-}
-
-.header {
-  background-color: var(--header-bg);
-  color: var(--header-text);
-}
-
-body.dark .header a {
-  color: var(--text-dark); 
-}
-
-body.dark .header a:hover {
-  color: var(--btn-bg-hover); 
-}
-
-
-body.dark .comments {
-  color: var(--text-light); 
-}
-
-
-body.dark .comments input,
-body.dark .comments textarea {
-  background-color: var(--input-bg);
-  color: var(--text-dark);
-  border: 1px solid #444; 
-}
-
-/* Contact form */
-
-body.dark .contact-page input,
-body.dark .contact-page textarea {
-  background-color: var(--input-bg);
-  color: var(--text-dark);
-  border: 1px solid #4b4949;
-}
-body.dark .contact-page input::placeholder,
-body.dark .contact-page textarea::placeholder {
-  color: var(--text-dark);
-  opacity: 1; 
-}
-
-
-
-body.dark .contact-page button {
-  background-color: var(--submit-btn-bg);
-  color: var(--text-dark);
-}
-
-body.dark .contact-page button:hover {
-  background-color: var(--submit-btn-bg-hover);
-}
-
-body.dark .like-btn {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
-  transition: background-color 0.2s ease;
-}
-
-body.dark .like-btn:hover:not(.liked) {
-  background-color: var(--btn-bg-hover);
-}
-
-body.dark .like-btn.liked {
-  background-color: #ff6b81;
-}
-
-.footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-}
-
-
-/* login */
-body.dark .login-card input {
-  padding: 10px;
-  border-radius: 8px;
-  background-color: var(--input-bg);
-  color: var(--text-dark);
-  border: 1px solid #795c5c;
-}
-
-
-body.dark .login-card input::placeholder,
-body.dark .login-card textarea::placeholder {
-  color: var(--text-dark);
-  opacity: 1; 
-}
-
-
-
-body.dark .login-card button {
-  background-color: var(--submit-btn-bg);
-  color: var(--text-dark);
-} 
-
-body.dark .login-card button:hover {
-  background-color: var(--submit-btn-bg-hover);
-}
-
-body.dark .individual-post {
-  background-color: white;
-}
-
-body.dark .individual-post h1,
-body.dark .individual-post p,
-body.dark .individual-post .meta {
-  color: var(--text-light);
-}
-
-
-
-
-/* home page */
-
-body.dark .feature-text p { 
-  color: var(--text-dark); 
-  margin-bottom: 20px; 
-  line-height: 1.6; 
-} 
-body.dark .about-text p { 
-  color: var(--text-dark); 
-  margin-bottom: 20px; 
-  line-height: 1.6; 
-} 
 
 
 
@@ -754,12 +580,7 @@ body.dark .about-text p {
 
 
 
-
-
-
-
-
-
+/* Projects */
 
 .projects {
   display: grid;
@@ -771,7 +592,6 @@ body.dark .about-text p {
   margin: 40px auto;
   padding: 0 20px;
 }
-
 
 .project-card {
   background-color: #16224e;
@@ -815,7 +635,6 @@ body.dark .about-text p {
   border: none;
 }
 
-/* PRIMARY */
 .cta-btn.primary {
   background-color: #007aff;
   color: white;
@@ -845,7 +664,6 @@ body.dark .about-text p {
 
 
 /** Feature Section **/ 
-
 .feature-section{ 
   display: flex; 
   align-items: center; 
@@ -880,7 +698,241 @@ body.dark .about-text p {
 
 
 
+/** About Page**/
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
 
+.about-image img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  margin-bottom: 15px;
+}
+
+.about-text p, 
+.about-text h2 {
+  line-height: 1.6;
+  color: white;
+}
+
+
+
+/** Footer **/
+.footer {
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  background: #972828;   
+  color: white;       
+}
+
+
+
+
+
+/** Styling for the logo */
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-container {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+
+/* Logo */
+
+.logo {
+  width: 50px;  
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo { 
+  width: 50px;
+  height: 80px;
+}
+
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+/** Dark Theme **/
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+
+
+/* Header */
+.header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+body.dark .header a {
+  color: var(--text-dark); 
+}
+
+body.dark .header a:hover {
+  color: var(--btn-bg-hover); 
+}
+
+
+
+
+/* comment */
+body.dark .comments {
+  color: var(--text-light); 
+}
+
+body.dark .comments input,
+body.dark .comments textarea {
+  background-color: var(--input-bg);
+  color: var(--text-dark);
+  border: 1px solid #444; 
+}
+
+
+
+
+/* Contact form */
+body.dark .contact-page input,
+body.dark .contact-page textarea {
+  background-color: var(--input-bg);
+  color: var(--text-dark);
+  border: 1px solid #4b4949;
+}
+body.dark .contact-page input::placeholder,
+body.dark .contact-page textarea::placeholder {
+  color: var(--text-dark);
+  opacity: 1; 
+}
+
+body.dark .contact-page button {
+  background-color: var(--submit-btn-bg);
+  color: var(--text-dark);
+}
+
+body.dark .contact-page button:hover {
+  background-color: var(--submit-btn-bg-hover);
+}
+
+
+/* like button */
+body.dark .like-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  transition: background-color 0.2s ease;
+}
+
+body.dark .like-btn:hover:not(.liked) {
+  background-color: var(--btn-bg-hover);
+}
+
+body.dark .like-btn.liked {
+  background-color: #ff6b81;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+
+/* login */
+body.dark .login-card input {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-dark);
+  border: 1px solid #795c5c;
+}
+
+
+body.dark .login-card input::placeholder,
+body.dark .login-card textarea::placeholder {
+  color: var(--text-dark);
+  opacity: 1; 
+}
+
+body.dark .login-card button {
+  background-color: var(--submit-btn-bg);
+  color: var(--text-dark);
+} 
+
+body.dark .login-card button:hover {
+  background-color: var(--submit-btn-bg-hover);
+}
+
+
+/*individual post*/
+body.dark .individual-post {
+  background-color: white;
+}
+
+body.dark .individual-post h1,
+body.dark .individual-post p,
+body.dark .individual-post .meta {
+  color: var(--text-light);
+}
+
+
+
+
+/* home page */
+body.dark .feature-text p { 
+  color: var(--text-dark); 
+  margin-bottom: 20px; 
+  line-height: 1.6; 
+} 
+body.dark .about-text p { 
+  color: var(--text-dark); 
+  margin-bottom: 20px; 
+  line-height: 1.6; 
+} 
+
+
+
+
+/* Responsive*/
 @media (max-width: 1024px){
   .projects{
     grid-template-columns: repeat(2,1fr);
@@ -927,97 +979,4 @@ body.dark .about-text p {
     padding: 20px;
   }
 }
-
-
-/** About Page**/
-.about-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 40px;
-  flex-wrap: wrap;
-}
-
-.about-image img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.about-text {
-  max-width: 500px;
-}
-
-.about-text h2 {
-  margin-bottom: 15px;
-}
-
-.about-text p, 
-.about-text h2 {
-  line-height: 1.6;
-  color: white;
-}
-
-
-
-/** Styling for the logo */
-
-.logo-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-
-
-
-.logo {
-  width: 50px;  
-  height: 50px;
-  object-fit: contain;
-}
-
-.logo { 
-  width: 50px;
-  height: 80px;
-}
-
-.logo {
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-}
-
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-}
-
-
-/* left side */
-.logo-container {
-  justify-self: start;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-
-
-.header h1 {
-  font-size: 40px; 
-  font-weight: 600;
-   margin: 0;
-}
-
-
-
-
 
